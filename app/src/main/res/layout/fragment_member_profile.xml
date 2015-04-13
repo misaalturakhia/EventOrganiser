@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/member_profile_scroll_container"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/member_profile_layout"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/application_background">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/game_large_row_height"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/member_profile_fullname_text"
+                />
+
+            <TextView
+                android:text="Center Attacking Midfield"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/member_profile_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/header_margin_vertical"
+            android:layout_marginBottom="@dimen/header_margin_horizontal"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_height">
+
+            <TextView
+                android:gravity="center|left"
+                android:text="@string/member_profile_username_title"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/member_profile_username_text"
+                android:gravity="center|right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_weight="0.4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_height">
+
+            <TextView
+                android:gravity="center|left"
+                android:text="@string/member_profile_email_title"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:gravity="center|right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/member_profile_email_text"
+                android:layout_weight="0.4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/header_margin_vertical"
+            android:layout_marginBottom="@dimen/header_margin_horizontal"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_height">
+
+            <TextView
+                android:gravity="center|left"
+                android:text="@string/member_profile_location_title"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_weight="0.4"
+                android:gravity="center|right"
+                android:id="@+id/member_profile_city_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="top|right"
+            android:id="@+id/member_profile_country_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/header_margin_vertical"
+            android:layout_marginBottom="@dimen/header_margin_horizontal"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_height">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/member_profile_contacts_title"
+                android:gravity="center|left"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:id="@+id/member_profile_no_of_contacts_text"
+                android:gravity="center|right"/>
+
+            </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/form_row_button"
+            android:text="@string/member_profile_view_contacts_btn_text"
+            android:id="@+id/member_profile_view_contacts_btn"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/header_margin_vertical"
+            android:layout_marginBottom="@dimen/header_margin_horizontal"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+</ScrollView>

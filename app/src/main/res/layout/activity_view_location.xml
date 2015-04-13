@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location Name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:editable="false"
+        android:focusable="false"
+        android:layout_height="@dimen/form_row_height"
+        android:id="@+id/view_location_name_tf"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extra Info"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/form_row_height"
+        android:id="@+id/view_location_desc_tv"
+        android:hint="No Information"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="left|center"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        />
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_location_map"
+        tools:context="com.android.khel247.ViewLocationActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+</LinearLayout>

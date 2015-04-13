@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:maxLength="20"
+        android:id="@+id/dialog_location_name_tf"
+        android:layout_gravity="center_horizontal"
+        android:inputType="text|textCapWords"
+        android:hint="@string/dialog_location_name_hint"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/form_row_height"
+        android:isScrollContainer="true"
+        android:maxLines="4"
+        android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+        android:ems="10"
+        android:id="@+id/dialog_location_desc_tf"
+        android:hint="@string/dialog_location_desc_hint"
+        android:gravity="left|top"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/dialog_location_latitude"
+            android:layout_weight="1"
+            android:lines="1"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/dialog_location_latitude_hint"
+            android:layout_marginRight="@dimen/form_half_width_field_margin" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/dialog_location_longitude"
+            android:editable="false"
+            android:lines="1"
+            android:focusable="false"
+            android:layout_weight="1"
+            android:hint="@string/dialog_location_longitude_hint"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/dialog_location_message_text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_location_point_maps_btn_text"
+        android:id="@+id/dialog_maps_btn"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:context="com.misaal.android.footballapp.LoginActivity.LoginFragment"
+    android:background="@color/application_background">
+
+    <AutoCompleteTextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/tf_height"
+        android:inputType="textEmailAddress"
+        android:id="@+id/login_username_tf"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        android:hint="@string/username"
+        android:imeOptions="actionNext"
+        />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tf_height"
+        android:inputType="textPassword"
+        android:id="@+id/login_password_tf"
+        android:hint="@string/password"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_password"
+        android:id="@+id/login_show_password_cb"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:id="@+id/login_btn"
+            android:layout_weight="0.5"
+            android:layout_marginRight="5dp"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:id="@+id/login_register_btn"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

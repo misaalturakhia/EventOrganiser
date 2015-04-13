@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_location_map"
+        android:layout_weight="1"
+        tools:context="com.android.khel247.GameLocationActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/mark_game_location_text"
+        android:id="@+id/textView"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_button"
+        android:id="@+id/linearLayout"
+        android:layout_margin="@dimen/header_margin_vertical">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/cancel_btn_text"
+            android:id="@+id/game_location_cancel_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/done_btn_text"
+            android:id="@+id/game_location_done_btn"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

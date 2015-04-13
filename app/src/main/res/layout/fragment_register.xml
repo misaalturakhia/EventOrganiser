@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.misaal.android.footballapp.fragments.RegisterFragment"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:background="@color/application_background">
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tf_height"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        android:inputType="textEmailAddress"
+        android:id="@+id/register_email_tf"
+        android:hint="@string/email"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tf_height"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        android:id="@+id/register_username_tf"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tf_height"
+        android:inputType="textPassword"
+        android:id="@+id/register_password_tf"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        android:hint="@string/password"
+        />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_password"
+        android:id="@+id/show_password_cb"
+        android:checked="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tf_height"
+        android:text="@string/next"
+        android:id="@+id/next_btn"
+        android:layout_marginTop="@dimen/tf_vertical_margin"
+        />
+
+
+</LinearLayout>

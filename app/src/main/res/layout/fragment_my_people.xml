@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/application_background"
+    tools:context="com.android.khel247.PeopleActivity$PlaceholderFragment">
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_people_searchview"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:hint="@string/contacts_search"
+        android:showDividers="beginning|middle|end"
+        android:measureWithLargestChild="true"
+        android:visibility="gone"/>
+
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/my_people_listview" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/my_people_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/my_people_empty_text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_people_search_people_link"
+            android:text="@string/my_people_search_people_link_text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:autoLink="phone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

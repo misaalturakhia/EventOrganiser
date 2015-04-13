@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.misaal.android.footballapp.FillProfileActivity$PlaceholderFragment"
+    android:baselineAligned="false"
+    android:measureWithLargestChild="false"
+    android:background="@color/application_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/form_row_height"
+        android:text="@string/personal_info_text"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        android:gravity="center_vertical"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textCapWords|textPersonName"
+            android:hint="@string/firstname"
+            android:id="@+id/fill_profile_firstname_tf"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textCapWords|textPersonName"
+            android:hint="@string/lastname"
+            android:id="@+id/fill_profile_lastname_tf"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/form_row_vertical_margin"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:inputType="textCapWords|textPersonName"
+        android:hint="@string/fill_profile_position"
+        android:id="@+id/fill_profile_position_tf"
+        android:layout_weight="1"
+        android:editable="false"
+        android:focusableInTouchMode="false"
+        android:layout_marginRight="@dimen/form_half_width_field_margin"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"/>
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/form_row_height"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:text="@string/location_desc_text"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        android:gravity="center_vertical"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:id="@+id/fill_profile_area_tf"
+        android:hint="@string/area_text"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        android:inputType="text|textCapWords" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textPostalAddress|textCapWords"
+            android:ems="10"
+            android:id="@+id/fill_profile_city_tf"
+            android:hint="@string/city_text"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:inputType="textCapWords|textPersonName"
+            android:hint="@string/fill_profile_country_text"
+            android:id="@+id/fill_profile_country_tf"
+            android:layout_weight="1"
+            android:editable="false"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:id="@+id/fill_profile_register_btn"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,264 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:background="@color/application_background"
+    tools:context="com.android.khel247.fragments.CreateGameFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/form_row_height"
+            android:inputType="textCapSentences|textPersonName"
+            android:maxLength="20"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"
+            android:ems="10"
+            android:hint="@string/game_name"
+            android:id="@+id/create_game_name_tf"
+            />
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/form_row_height"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:id="@+id/create_game_mode_radio_group"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/game_mode_private"
+                android:id="@+id/create_game_private_radio"
+                android:checked="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/game_mode_public"
+                android:id="@+id/create_game_public_radio"
+                />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin"
+        >
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/create_game_format_tf"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"
+            android:focusable="false"
+            android:editable="false"
+            android:hint="@string/game_format"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:hint="@string/game_duration"
+            android:id="@+id/create_game_duration_tf"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin"
+            android:focusable="false"
+            android:editable="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/create_game_date_tf"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"
+            android:editable="false"
+            android:focusable="false"
+            android:hint="@string/game_date" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:inputType="time"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin"
+            android:ems="10"
+            android:id="@+id/create_game_time_tf"
+            android:editable="false"
+            android:focusable="false"
+            android:layout_weight="1"
+            android:hint="@string/game_time" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:layout_marginTop="@dimen/form_row_vertical_margin"
+        android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/create_game_location_tf"
+            android:hint="@string/game_location"
+            android:focusable="false"
+            android:editable="false"
+            android:clickable="true"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/form_half_width_field_margin"
+            />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/create_game_invite_tf"
+            android:hint="@string/game_invite"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:editable="false"
+            android:clickable="true"
+            android:layout_marginLeft="@dimen/form_half_width_field_margin"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/create_game_invited_list_view"
+        android:isScrollContainer="false"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:text="@string/game_advanced_options"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/create_game_advanced_options"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_game_advanced_opts_layout"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/form_row_height"
+            android:layout_marginTop="@dimen/form_row_vertical_margin"
+            android:layout_marginBottom="@dimen/form_row_vertical_margin">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:editable="false"
+                android:focusable="false"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/create_game_min_people"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/form_half_width_field_margin"
+                android:hint="@string/game_min_players" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="number"
+                android:focusable="false"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/create_game_max_people"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/form_half_width_field_margin"
+                android:hint="@string/game_max_players" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/form_row_height"
+            android:ems="10"
+            android:editable="false"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/create_game_notify_hours_before"
+            android:layout_weight="1"
+            android:hint="@string/game_notify_hours_before"
+            android:layout_marginTop="@dimen/form_row_vertical_margin"
+            android:layout_marginBottom="@dimen/form_row_vertical_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/create_game_notify_added_text"
+            android:layout_gravity="right" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/form_row_height"
+                android:text="@string/game_use_location_as_name"
+                android:id="@+id/create_game_use_location_as_name"
+                android:layout_marginTop="@dimen/form_row_vertical_margin"
+                android:layout_marginBottom="@dimen/form_row_vertical_margin"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/game_organiser_playing"
+                android:id="@+id/create_game_organiser_not_playing"
+                android:layout_weight="1"
+                android:checked="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/form_row_height"
+        android:text="@string/create_game_btn_text"
+        android:id="@+id/create_game_btn"
+        />
+
+</LinearLayout>
+
+
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">-->

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.khel247.fragments.SearchPeopleFragment"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/application_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/form_row_height"
+        >
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_people_tf"
+            android:inputType="text|textEmailAddress"
+            android:imeOptions="actionSearch"
+            android:imeActionLabel="Search"
+            android:singleLine="true"
+            android:hint="@string/member_search"
+            android:measureWithLargestChild="true"
+            android:gravity="center|left"/>
+
+        <ImageButton
+            android:id="@+id/search_people_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/search_36"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <ListView android:id="@+id/search_people_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView android:id="@+id/search_people_list_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        />
+
+</LinearLayout>

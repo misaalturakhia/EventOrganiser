@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.misaal.android.footballapp.LoginActivity"
+    tools:ignore="MergeRootFrame"
+    android:orientation="vertical"
+    android:background="@color/application_background"
+    android:padding="@dimen/activity_vertical_margin"
+    >
+
+</LinearLayout>
